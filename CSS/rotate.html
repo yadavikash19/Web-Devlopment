@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: Jetbrains Mono;
+        }
+
+        div{
+            position: relative;
+            height: 100px;
+            width: 100px;
+            border: solid black 2px;
+            background-color: aqua;
+            top: 50px;
+            left: 50px;
+            transition: all 1s ease-in;
+        }
+        div:hover{
+            transform: rotate(90deg);
+            transform: scale(2);
+            transform: translateX(200px);
+            transform: skew(90deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">BOX</div>
+</body>
+</html>
