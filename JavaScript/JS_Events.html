@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+    <style>
+        button{
+            display: block;
+            margin: 4px;
+            background-color: aqua;
+        }
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn" onclick="console.log('Button Was Clicked');
+    alert('CLICKED!!')">
+    CLICK ME
+    <button ondblclick="console.log('Button Was Double Clicked');
+    alert('CLICKED Twice!!')">
+        CLICK ME TWICE
+    </button>
+    <div>THIS IS DIV</div>
+
+<script>
+    let btn= document.querySelector(".btn")
+    btn.onclick= () =>{
+        document.body.style.backgroundColor="red";
+    }
+
+    let div= document.querySelector("div");
+    div.onmouseover= () => {
+        console.log("YOU ARE INSIDE...");
+        document.body.style.backgroundColor="red";
+    }
+    div.onmouseleave= ()=> {
+        console.log("YOU ARE OUTSIDE...");
+        document.body.style.backgroundColor="blue";
+    }
+</script>
+
+</button>
+</body>
+</html>
