@@ -40,4 +40,60 @@ npm commands
  • You can use it to see all versions of a package
 */
 
-//Semantic Versioning System
+//Semantic Versioning System ✓✓✓✓✓✓
+
+/*
+npm install <package-name>@<version>
+ Examples:
+ • npm install express@4.0.0 // ^4.0.0
+ • npm install express@4.0.0 --save-exact // To install exact version.
+ • npm install express@~4.0.0
+ • npm install express@4.2.x
+ You can use any symbols while specifying version.
+npm outdated
+ • It shows outdated packages in your project.
+ • Current: The version of the package currently installed in your project.
+ • Wanted: The latest version that satisfies the version range defined in your package.json. It basically uses the symbols to get it.
+ • Latest: Absolute latest version of the package.
+npm remove <package-name
+*/
+
+/*
+npm update
+ • This updates all the packages in your project, but it follows the range defined in package.json. It doesn’t update to absolute latest version.
+npx npm-check-updates
+ • npx is a CLI tool that comes with npm.
+ • It is used to execute a package without requiring you to install globally or locally.
+ • It is useful for temporary usage of a package.
+ • npm-check-updates is a package which you can use to upgrade your packages to absolute latest versions.
+ • Use -u flag at the end to update the packages after reviewing.
+ • This only updates package.json, then you can use npm install to update the packages.
+*/
+
+/*
+Global packages
+ • Up until now, we have been installing packages locally.
+To install package globally,
+ • npm install -g npm-check-updates
+ • On Linux, and macOS, you might have to prefix it with sudo
+ • This package gets installed globally, and you can access from anywhere.
+ • You can try running npm-check-updates command anywhere in any projects without using npx.
+ • npm-check-updates also have an alias named ncu, which you can also use.
+Fun fact: npm is itself a global package which means if you need to update npm, you will do: npm install -g npm
+npm outdated -g
+ • To see outdated global packages.
+npm update –g <package-name>
+npm remove -g <package-name>
+*/
+
+/*
+Development dependencies are the packages that aren’t needed for functioning of your project in production.
+ • This can be for formatting, linting, testing, and so on.
+ • If you use npm install --production, those packages won’t be installed, but they will be installed if you don’t use production flag.
+npm install -D eslint
+ • This will install eslint as a development dependency.
+ • You will see it in separate property inside package.json named “devDependencies”
+*/
+
+// V8- For Synchronous Tasks
+// Libuz- For Asynchronous Tasks- event loop, thread pool
