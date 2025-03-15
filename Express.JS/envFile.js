@@ -6,12 +6,14 @@
 
 //=================================================
 import express from "express";
+import {PORT} from "./env.js"
+
 const app = express();
 
 
 app.get("/", (req,res) => res.send("<h1>Hello World!</h1>")); //routing k liye get method, ab two paarmeters- 1st- path- home page:- "/
 
-const PORT= process.env.PORT || 3000;  //process obj get krlega
+// const PORT= process.env.PORT || 3000;  //process obj get krlega
 app.listen(PORT, ()=>{
     console.log(`Server is running at port: ${PORT}`);
 })
@@ -25,3 +27,9 @@ app.listen(PORT, ()=>{
 //For newer people:-
 //--env-file syntax
 // and env variables as:- VARUABKE=value separated by new line
+
+//to check-  echo $env:PORT
+// to remove- Remove-Item env:\PORT
+
+//==================================================
+//Validating Environment Variables- validation library like Zod
