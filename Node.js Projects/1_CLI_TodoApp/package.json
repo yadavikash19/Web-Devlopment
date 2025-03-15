@@ -1,0 +1,12 @@
+{
+  "name": "1_cli_todoapp",
+  "version": "1.0.0",
+  "description": "Building a CLI Todo App using Node.js",
+  "license": "ISC",
+  "author": "Vikash Yadav",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
