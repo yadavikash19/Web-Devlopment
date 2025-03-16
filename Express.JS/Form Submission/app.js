@@ -17,13 +17,19 @@ app.get("/contact", (req,res) => {
     res.redirect("/");
     // res.send(`Name is ${req.query.name} & message is ${req.query.message}`)
 });
-*/ 
+*/
+
 app.post("/contact", (req,res) => {
     res.send(req.body);  //undefined
     // res.redirect("/");
 });
 
 //get me kya ho rha h ki chice upar url me show krengi joki shi nhi h or url long accept b nhi krti
+
+app.use((req,res) => {
+    return res.status(404).sendFile(path.join(import.meta.dirname, "views","404.html"));
+    // res.status(404).send(`<h1>404 Page Not Found</h1>`);
+})
 
 const PORT= 3000;
 app.listen(PORT, ()=>{
