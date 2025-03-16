@@ -2,13 +2,17 @@
 import readline from "readline/promises";
 import chalk from "chalk";
 
+import dotenv from 'dotenv';
+dotenv.config();
+
 const rl = readline.createInterface({  //interface jispe hm kuch b read ya write kr ske
     input:process.stdin, 
     output:process.stdout
 })
 
-const API_KEY= `cadae630763270d4b3c99e1719435a30`;
-const BASE_URL= `http://api.openweathermap.org/data/2.5/weather`;
+const BASE_URL = process.env.URL;  
+const API_KEY = process.env.API_KEY;
+
 
 const getWeather= async (city) => {
     const url= `${BASE_URL}?q=${city}&APPID=${API_KEY}&units=metric`;
