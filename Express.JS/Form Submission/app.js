@@ -14,14 +14,16 @@ app.use(express.urlencoded({extended:true}));
 /*
 app.get("/contact", (req,res) => {
     console.log(req.query);
-    res.redirect("/");
-    // res.send(`Name is ${req.query.name} & message is ${req.query.message}`)
+    // res.redirect("/");
+    res.send(`Name is ${req.query.name} & message is ${req.query.message}`)
 });
 */
 
+
 app.post("/contact", (req,res) => {
-    res.send(req.body);  //undefined
-    // res.redirect("/");
+    console.log(req.body);
+    res.redirect("/");
+    // res.send(req.body);  //undefined
 });
 
 //get me kya ho rha h ki chice upar url me show krengi joki shi nhi h or url long accept b nhi krti

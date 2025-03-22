@@ -24,15 +24,15 @@ https.get(url, (response)=>{
         data += chunk;
     })
     response.on('end', ()=>{  //ab data milne ke baad end wala ki ab kha show krna h
-        // console.log("🔍 Raw API Response:", data);
+        console.log("🔍 Raw API Response:", data);
 
-        // try {
-        //     const parsedData = JSON.parse(data);
-        //     console.log("✅ Parsed JSON:", parsedData);
-        // } catch (error) {
-        //     console.error("❌ JSON Parsing Error:", error.message);
-        // }
-        // const rates= JSON.parse(data).conversion_rates;
+        try {
+            const parsedData = JSON.parse(data);
+            console.log("✅ Parsed JSON:", parsedData);
+        } catch (error) {
+            console.error("❌ JSON Parsing Error:", error.message);
+        }
+        const rates= JSON.parse(data).conversion_rates;
 
         // console.log(rates);
 

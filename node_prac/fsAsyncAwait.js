@@ -24,7 +24,7 @@ readFolder();
 const writeFileExample = async () => {
     try{
         await fs.writeFile(filePath, "This is initial data","utf-8");
-        console.log("File created succesfully");
+        console.log("File created succesfully");    ``
     } catch(error){
         console.error(error);
     }

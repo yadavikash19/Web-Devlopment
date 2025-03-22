@@ -6,7 +6,8 @@ const app = express();
 
 //In newer version of Node.js (14.8+), you can use top-level await without needing to wrap it in an async function
 
-// /fetch API to fetch the data and promises return so using await
+//ES Modules- Caveats
+// fetch API to fetch the data and promises return so using await
 const response = await fetch("https://official-joke-api.appspot.com/random_joke");
 const json= await response.json();   //jo result milta h usko json me convert krte h or wait
 console.log(json);
@@ -16,6 +17,7 @@ app.use(express.static(staticPath))  //Alternate way- jisme hmne public folder k
 app.use("/public",express.static(staticPath))  //jab hame /public url path pr dikhana ho
 // app.use(express.static("public"))  //it is a middleware
 
+//=========================
 // app- This variable holds the created Express app, which you can use to:
 // Define routes- app.get(), app.post(), etc
 // configure- middleware- app.use()
@@ -37,6 +39,11 @@ app.get("/", (req,res) => {
 
 app.get("/about", (req,res) => res.send("<h1>Hello About Page</h1>"));
 app.get("/contact", (req,res) => {
+    console.log(import.meta.dirname); // __dirname not defined in express
+    console.log(import.meta.url); 
+    const __filename= new URL(import.meta.url).pathname;
+    console.log(__filename);
+
     return res.send("<h1>Hello Contact Page</h1>");
 });
 
